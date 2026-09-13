@@ -191,10 +191,54 @@ let currentArtworkIndex = 0;
 
 // Initialize on DOM Ready
 document.addEventListener('DOMContentLoaded', () => {
+  setupMobileNav();
   setupArtworkModal();
   setupAudioPlayers();
   setupVideoPlaceholders();
 });
+
+/**
+ * Setup Mobile Navigation Drawer & Hamburger Toggle
+ */
+function setupMobileNav() {
+  const toggleBtn = document.getElementById('navToggle');
+  const navLinks = document.querySelector('.ccac-nav-links');
+  if (!toggleBtn || !navLinks) return;
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = navLinks.classList.toggle('open');
+    toggleBtn.classList.toggle('open', isOpen);
+    toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+
+  // Close drawer when any link is clicked
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      toggleBtn.classList.remove('open');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Close drawer when clicking anywhere outside
+  document.addEventListener('click', (e) => {
+    if (!navLinks.contains(e.target) && !toggleBtn.contains(e.target)) {
+      navLinks.classList.remove('open');
+      toggleBtn.classList.remove('open');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Auto-close on resize to desktop
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768 && navLinks.classList.contains('open')) {
+      navLinks.classList.remove('open');
+      toggleBtn.classList.remove('open');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
 
 /**
  * Setup Artwork Modal Lightbox

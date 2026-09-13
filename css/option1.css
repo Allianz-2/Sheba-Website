@@ -126,6 +126,45 @@ body.theme-option1 {
   background: #111;
 }
 
+/* Navigation Toggle Button (Hidden on Desktop) */
+.ccac-nav-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  width: 42px;
+  height: 42px;
+  position: relative;
+  z-index: 1001;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.ccac-nav-toggle .nav-toggle-bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #111111;
+  border-radius: 1px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.ccac-nav-toggle.open .nav-toggle-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.ccac-nav-toggle.open .nav-toggle-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.ccac-nav-toggle.open .nav-toggle-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+
 /* Minimal Hero */
 .ccac-hero {
   position: relative;
@@ -556,3 +595,203 @@ body.theme-option1 {
     text-align: left;
   }
 }
+
+/* ==========================================================================
+   MOBILE RESPONSIVENESS ENHANCEMENTS (max-width: 768px)
+   Leaves desktop (min-width: 769px) 100% untouched and pixel-identical.
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Navigation */
+  .ccac-nav-inner {
+    height: 64px;
+  }
+
+  .ccac-brand-logo {
+    font-size: clamp(0.92rem, 3.8vw, 1.05rem);
+    letter-spacing: 0.02em;
+  }
+
+  .ccac-nav-toggle {
+    display: flex;
+  }
+
+  .ccac-nav-links {
+    position: fixed;
+    top: 68px; /* 64px header + 4px top brand stripe */
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 2px solid var(--ccac-border-dark);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 0.5rem 0 1rem 0;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+    display: none;
+    z-index: 999;
+  }
+
+  .ccac-nav-links.open {
+    display: flex;
+    animation: navSlideDown 0.25s ease forwards;
+  }
+
+  @keyframes navSlideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .ccac-nav-links li {
+    width: 100%;
+  }
+
+  .ccac-nav-links a {
+    display: block;
+    width: 100%;
+    padding: 0.9rem 1.5rem;
+    font-size: 0.95rem;
+    color: #222;
+    border-bottom: 1px solid #f2f2f2;
+  }
+
+  .ccac-nav-links a:hover,
+  .ccac-nav-links a.active {
+    background: var(--ccac-accent-light);
+    color: var(--ccac-accent);
+  }
+
+  .ccac-nav-links a.active::after {
+    display: none;
+  }
+
+  /* Hero Section */
+  .ccac-hero {
+    padding: 3rem 0 2.25rem 0;
+  }
+
+  .ccac-hero-grid {
+    gap: 2rem;
+  }
+
+  .ccac-hero-title {
+    font-size: clamp(2.1rem, 7.8vw, 3rem);
+    line-height: 1.08;
+    margin-bottom: 1.15rem;
+  }
+
+  .ccac-hero-quote {
+    font-size: 1.02rem;
+    line-height: 1.6;
+    padding-left: 1rem;
+  }
+
+  .ccac-hero-visual {
+    padding: 0.65rem;
+  }
+
+  /* Overview Section */
+  .ccac-overview {
+    padding: 2.75rem 0;
+  }
+
+  .ccac-overview-inner h2 {
+    font-size: clamp(1.75rem, 6vw, 2.25rem);
+    margin-bottom: 1rem;
+  }
+
+  .ccac-overview-lead {
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  /* Artworks Collection */
+  .ccac-artworks-section {
+    padding: 3.5rem 0;
+  }
+
+  .ccac-section-header {
+    margin-bottom: 2rem;
+    gap: 0.75rem;
+  }
+
+  .ccac-section-header h2 {
+    font-size: clamp(1.85rem, 6.5vw, 2.5rem);
+  }
+
+  /* Visiting Artist Section */
+  .ccac-artist-section {
+    padding: 3.5rem 0;
+  }
+
+  .ccac-artist-grid {
+    gap: 2.5rem;
+  }
+
+  .ccac-artist-info h2 {
+    font-size: clamp(1.85rem, 6.5vw, 2.5rem);
+  }
+
+  .ccac-artist-info p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .ccac-quote-block {
+    font-size: 1rem;
+    padding: 0.85rem 1rem;
+  }
+
+  .ccac-artist-gallery {
+    margin-top: 3rem !important;
+    padding-top: 2.5rem !important;
+  }
+
+  .ccac-artist-gallery h3 {
+    font-size: clamp(1.5rem, 5.5vw, 2.25rem) !important;
+  }
+
+  /* Reflection Section */
+  .ccac-reflection {
+    padding: 3.5rem 0;
+  }
+
+  .ccac-reflection-card {
+    padding: 2.25rem 1.25rem;
+  }
+
+  .ccac-reflection-card h2 {
+    font-size: clamp(1.65rem, 5.5vw, 2.25rem);
+    margin-bottom: 1rem;
+  }
+
+  .ccac-reflection-card p {
+    font-size: 1.02rem;
+    line-height: 1.7;
+  }
+
+  /* Footer */
+  .ccac-footer {
+    padding: 2.75rem 0;
+  }
+}
+
+@media (max-width: 599px) {
+  .ccac-catalog-grid {
+    gap: 1.5rem;
+  }
+
+  .ccac-card-media {
+    padding: 0.75rem;
+  }
+
+  .ccac-card-body {
+    padding: 1.15rem 1rem;
+  }
+}
+
