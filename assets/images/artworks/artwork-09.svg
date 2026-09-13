@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg09" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2c1712"/>
+      <stop offset="100%" stop-color="#52291d"/>
+    </linearGradient>
+    <radialGradient id="halo09" cx="50%" cy="45%" r="45%">
+      <stop offset="0%" stop-color="#f27957" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#f27957" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  
+  <rect width="600" height="750" fill="url(#bg09)"/>
+  
+  <!-- Subtle tactile texture backdrop -->
+  <rect x="30" y="30" width="540" height="690" fill="none" stroke="#f27957" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="6,6"/>
+  
+  <circle cx="300" cy="320" r="180" fill="url(#halo09)"/>
+  
+  <!-- Symbolic artwork focal shape -->
+  <path d="M180,240 C220,160 380,160 420,240 C460,320 380,480 300,480 C220,480 140,320 180,240 Z" fill="#dfd3c3" opacity="0.88"/>
+  <path d="M220,280 C240,220 360,220 380,280 C400,340 340,430 300,430 C260,430 200,340 220,280 Z" fill="#f27957" opacity="0.35"/>
+  
+  <!-- Stitched line influenced by Snelihle Maphumulo -->
+  <path d="M190,320 Q300,360 410,320" stroke="#f27957" stroke-width="2.5" fill="none" stroke-dasharray="7,5"/>
+  <path d="M210,370 Q300,410 390,370" stroke="#2c1712" stroke-width="2" fill="none" stroke-dasharray="4,4"/>
+  
+  <circle cx="300" cy="270" r="28" fill="#f27957"/>
+  
+  <!-- Index Number Badge -->
+  <rect x="50" y="50" width="54" height="28" fill="#110f0e" rx="4" opacity="0.85"/>
+  <text x="77" y="69" font-family="'Inter', sans-serif" font-size="13" font-weight="700" fill="#f27957" text-anchor="middle">09</text>
+  
+  <!-- Museum Label In Image -->
+  <rect x="40" y="580" width="520" height="120" fill="#0d0b0a" opacity="0.75" rx="6"/>
+  <text x="60" y="615" font-family="'Playfair Display', serif" font-size="20" font-weight="700" fill="#f5eee6">Vessel of Resilience</text>
+  <text x="60" y="642" font-family="'Inter', sans-serif" font-size="14" fill="#f27957">Student Artist: Zanele Buthelezi</text>
+  <text x="60" y="668" font-family="'Inter', sans-serif" font-size="12" fill="#a6998d">Terracotta Slip, Wood Ash & Wire Weaving</text>
+</svg>

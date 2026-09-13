@@ -1,0 +1,558 @@
+/* ==========================================================================
+   OPTION 1: CCAC GALLERY MINIMAL (LIGHT)
+   Inspired by Constitutional Court Art Collection (ccac.concourttrust.org.za)
+   Clean, minimal, spacious, institutional South African art gallery
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@600;700;800&family=Lato:wght@300;400;700&display=swap');
+
+:root {
+  --ccac-bg: #fbfbfb;
+  --ccac-surface: #ffffff;
+  --ccac-border: #e8e8e8;
+  --ccac-border-dark: #111111;
+  --ccac-text: #1a1a1a;
+  --ccac-muted: #666666;
+  --ccac-accent: #b85d38; /* Subtle ochre-terracotta from CCAC identity */
+  --ccac-accent-light: #f5ede6;
+  --font-heading: 'Syne', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Lato', 'Space Grotesk', sans-serif;
+}
+
+body.theme-option1 {
+  background-color: var(--ccac-bg);
+  color: var(--ccac-text);
+  font-family: var(--font-body);
+  letter-spacing: 0.01em;
+}
+
+.theme-option1 h1,
+.theme-option1 h2,
+.theme-option1 h3,
+.theme-option1 h4 {
+  font-family: var(--font-heading);
+  color: var(--ccac-text);
+  letter-spacing: -0.02em;
+}
+
+/* Top Institutional Bar */
+.ccac-top-stripe {
+  height: 4px;
+  background: var(--ccac-accent);
+}
+
+/* Clean Header / Nav */
+.ccac-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--ccac-border);
+}
+
+.ccac-nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.ccac-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.ccac-brand-logo {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #111;
+}
+
+.ccac-brand-logo span {
+  color: var(--ccac-accent);
+}
+
+.ccac-brand-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ccac-muted);
+  border-left: 1px solid var(--ccac-border);
+  padding-left: 0.85rem;
+  display: none;
+}
+
+@media (min-width: 680px) {
+  .ccac-brand-badge {
+    display: inline-block;
+  }
+}
+
+.ccac-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.ccac-nav-links a {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #444;
+  padding: 0.3rem 0;
+  position: relative;
+}
+
+.ccac-nav-links a:hover,
+.ccac-nav-links a.active {
+  color: #000;
+}
+
+.ccac-nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #111;
+}
+
+/* Minimal Hero */
+.ccac-hero {
+  position: relative;
+  background: #ffffff;
+  border-bottom: 1px solid var(--ccac-border);
+  padding: 5rem 0 4.5rem 0;
+}
+
+.ccac-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 860px) {
+  .ccac-hero-grid {
+    grid-template-columns: 1.25fr 1fr;
+  }
+}
+
+.ccac-kicker {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--ccac-accent);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ccac-hero-title {
+  font-size: 3.25rem;
+  line-height: 1.05;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  color: #111;
+}
+
+@media (min-width: 768px) {
+  .ccac-hero-title {
+    font-size: 4.25rem;
+  }
+}
+
+.ccac-hero-quote {
+  font-size: 1.18rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 0;
+  border-left: 3px solid #111;
+  padding-left: 1.25rem;
+}
+
+.ccac-meta-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  font-size: 0.82rem;
+  color: var(--ccac-muted);
+  border-top: 1px solid var(--ccac-border);
+  padding-top: 1.5rem;
+}
+
+.ccac-meta-item strong {
+  color: #111;
+}
+
+.ccac-hero-visual {
+  background: #f5f5f5;
+  border: 1px solid var(--ccac-border);
+  padding: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.ccac-hero-visual picture,
+.ccac-hero-visual img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.ccac-hero-caption {
+  font-size: 0.78rem;
+  color: var(--ccac-muted);
+  margin-top: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Minimal Overview Section */
+.ccac-overview {
+  background: #ffffff;
+  border-bottom: 1px solid var(--ccac-border);
+  padding: 4rem 0;
+}
+
+.ccac-overview-inner {
+  max-width: 860px;
+}
+
+.ccac-overview-inner h2 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.ccac-overview-lead {
+  font-size: 1.2rem;
+  line-height: 1.75;
+  color: #222;
+}
+
+/* Artworks Collection Section (CCAC Catalog Grid) */
+.ccac-artworks-section {
+  padding: 5rem 0;
+  background: var(--ccac-bg);
+}
+
+.ccac-section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid var(--ccac-border);
+  padding-bottom: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .ccac-section-header {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+}
+
+.ccac-section-header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.ccac-section-count {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--ccac-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* CCAC Clean Card Grid */
+.ccac-catalog-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 600px) {
+  .ccac-catalog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .ccac-catalog-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.ccac-card {
+  background: #ffffff;
+  border: 1px solid var(--ccac-border);
+  border-radius: 0; /* CCAC signature sharp rectangular corners */
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.ccac-card:hover {
+  transform: translateY(-4px);
+  border-color: #111;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.ccac-card-media {
+  background: #111111;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 4 / 4.8;
+  position: relative;
+}
+
+.ccac-card-media img {
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.ccac-card-id-tag {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background: rgba(255, 255, 255, 0.95);
+  color: #111;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 0.2rem 0.5rem;
+}
+
+.ccac-card-body {
+  padding: 1.35rem 1.25rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.ccac-card-artist {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 0.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ccac-card-title {
+  font-size: 1.1rem;
+  font-style: italic;
+  font-family: var(--font-body);
+  color: #222;
+  margin-bottom: 0.4rem;
+}
+
+.ccac-card-medium {
+  font-size: 0.78rem;
+  color: var(--ccac-muted);
+  margin-bottom: 0.85rem;
+}
+
+.ccac-card-action {
+  margin-top: auto;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ccac-accent);
+  padding-top: 0.75rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+/* Image-Only Gallery Cards (Artist Gallery) */
+.ccac-card-image-only {
+  background: #111111;
+  border: 1px solid var(--ccac-border);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.ccac-card-image-only:hover {
+  transform: translateY(-4px);
+  border-color: #111111;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.18);
+}
+
+.ccac-card-image-only .ccac-card-media {
+  aspect-ratio: 4 / 3.8;
+  padding: 0.75rem;
+  background: #111111;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ccac-card-image-only .ccac-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.ccac-card-image-only:hover .ccac-card-media img {
+  transform: scale(1.035);
+}
+
+.ccac-card-zoom-hint {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: rgba(0, 0, 0, 0.78);
+  color: #ffffff;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.ccac-card-image-only:hover .ccac-card-zoom-hint {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Visiting Artist Section */
+.ccac-artist-section {
+  background: #ffffff;
+  border-top: 1px solid var(--ccac-border);
+  border-bottom: 1px solid var(--ccac-border);
+  padding: 5rem 0;
+}
+
+.ccac-artist-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .ccac-artist-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.ccac-artist-info h2 {
+  font-size: 2.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.ccac-artist-role {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--ccac-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 1.5rem;
+}
+
+.ccac-artist-info p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.ccac-quote-block {
+  border-left: 3px solid #111;
+  padding: 1rem 1.25rem;
+  background: #f7f7f7;
+  font-size: 1.05rem;
+  font-style: italic;
+  color: #222;
+  margin-bottom: 1.5rem;
+}
+
+/* Reflection Section */
+.ccac-reflection {
+  padding: 4.5rem 0;
+  background: var(--ccac-bg);
+}
+
+.ccac-reflection-card {
+  max-width: 820px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid var(--ccac-border);
+  padding: 3rem 2.5rem;
+  text-align: center;
+}
+
+.ccac-reflection-card h2 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.ccac-reflection-card p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* CCAC Clean Footer */
+.ccac-footer {
+  background: #111111;
+  color: #999;
+  padding: 3.5rem 0;
+  font-size: 0.85rem;
+}
+
+.ccac-footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .ccac-footer-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}

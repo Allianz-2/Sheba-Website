@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" width="100%" height="100%">
+  <defs>
+    <linearGradient id="artBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2c241e"/>
+      <stop offset="100%" stop-color="#14110f"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#c99738" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#c99738" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="700" fill="url(#artBg)"/>
+  <circle cx="300" cy="290" r="210" fill="url(#halo)"/>
+  <circle cx="300" cy="290" r="190" fill="none" stroke="#c99738" stroke-width="1" stroke-dasharray="6,6"/>
+  
+  <!-- Stylized Sculptor Silhouette in studio -->
+  <path d="M300,160 C340,160 370,195 370,240 C370,285 340,320 300,320 C260,320 230,285 230,240 C230,195 260,160 300,160 Z" fill="#4a3b32"/>
+  <path d="M300,180 C325,180 345,200 345,230 C345,260 325,285 300,285 C275,285 255,260 255,230 C255,200 275,180 300,180 Z" fill="#695345"/>
+  
+  <!-- Traditional Headwrap & Shoulders -->
+  <path d="M220,210 C240,130 360,130 380,210 C390,230 385,250 375,255 C345,210 255,210 225,255 C215,250 210,230 220,210 Z" fill="#b85d38"/>
+  <path d="M160,540 C170,410 230,350 300,350 C370,350 430,410 440,540 L460,700 L140,700 Z" fill="#2d221c"/>
+  
+  <!-- Sheep hide drapery texture -->
+  <path d="M210,380 C240,360 360,360 390,380 C405,430 385,510 360,550 C330,520 270,520 240,550 C215,510 195,430 210,380 Z" fill="#d9c3b0" opacity="0.85"/>
+  <path d="M230,410 Q300,430 370,410 M220,460 Q300,480 380,460 M240,510 Q300,530 360,510" stroke="#7a5c43" stroke-width="2" fill="none" stroke-dasharray="3,3"/>
+  
+  <text x="300" y="640" font-family="'Playfair Display', serif, Georgia" font-size="22" fill="#e8dacb" text-anchor="middle" letter-spacing="3">SNELIHLE MAPHUMULO</text>
+  <text x="300" y="670" font-family="'Inter', sans-serif" font-size="13" fill="#c99738" text-anchor="middle" letter-spacing="2">VISITING ARTIST &amp; SCULPTOR</text>
+</svg>

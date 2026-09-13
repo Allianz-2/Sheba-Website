@@ -1,0 +1,462 @@
+/* ==========================================================================
+   OPTION 3: THE CONTEMPORARY BIENNIAL PAVILION
+   Bold, Architectural, High-Contrast Contemporary Gallery
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@500;700;800&display=swap');
+
+:root {
+  --pav-bg: #0c0d0f;
+  --pav-surface: #14161a;
+  --pav-card: #181b20;
+  --pav-border: #262a33;
+  --pav-text: #f0f2f5;
+  --pav-muted: #8b92a0;
+  --pav-accent: #f5a623;
+  --pav-accent-glow: rgba(245, 166, 35, 0.2);
+  --pav-blue: #3d7bf5;
+  --font-heading: 'Syne', sans-serif;
+  --font-body: 'Space Grotesk', sans-serif;
+}
+
+body.theme-option3 {
+  background-color: var(--pav-bg);
+  color: var(--pav-text);
+  font-family: var(--font-body);
+}
+
+.theme-option3 h1,
+.theme-option3 h2,
+.theme-option3 h3,
+.theme-option3 h4 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+/* Pavilion Nav */
+.pav-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(12, 13, 15, 0.95);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--pav-border);
+}
+
+.pav-nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.pav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.pav-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #00ff66;
+  box-shadow: 0 0 10px #00ff66;
+  animation: blink 2s infinite ease-in-out;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.pav-brand-title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.pav-brand-title span {
+  color: var(--pav-accent);
+}
+
+.pav-nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.pav-nav-links a {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--pav-muted);
+  transition: all 0.2s ease;
+}
+
+.pav-nav-links a:hover,
+.pav-nav-links a.active {
+  color: #ffffff;
+}
+
+/* Pavilion Hero */
+.pav-hero {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--pav-border);
+  overflow: hidden;
+  padding: 6rem 0;
+}
+
+.pav-hero-bg-lines {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+.pav-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.pav-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--pav-accent);
+  margin-bottom: 1.5rem;
+}
+
+.pav-hero-title {
+  font-size: 4rem;
+  line-height: 0.98;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  max-width: 980px;
+}
+
+@media (min-width: 768px) {
+  .pav-hero-title {
+    font-size: 5.5rem;
+  }
+}
+
+.pav-hero-statement {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #c0c6d4;
+  max-width: 720px;
+  margin-bottom: 2.5rem;
+}
+
+.pav-hero-meta-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--pav-border);
+}
+
+.pav-meta-cell-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--pav-muted);
+  margin-bottom: 0.35rem;
+}
+
+.pav-meta-cell-val {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Pavilion Overview */
+.pav-overview {
+  background: var(--pav-surface);
+  border-bottom: 1px solid var(--pav-border);
+}
+
+.pav-overview-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
+}
+
+@media (min-width: 860px) {
+  .pav-overview-grid {
+    grid-template-columns: 1.2fr 1fr;
+  }
+}
+
+.pav-overview-grid h2 {
+  font-size: 3rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.pav-overview-text {
+  font-size: 1.1rem;
+  line-height: 1.85;
+  color: #a6adb9;
+}
+
+.pav-overview-stat-box {
+  background: var(--pav-card);
+  border: 1px solid var(--pav-border);
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pav-stat-item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--pav-border);
+  padding-bottom: 1rem;
+}
+
+.pav-stat-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.pav-stat-num {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--pav-accent);
+}
+
+/* Pavilion Artworks (Explore the Artworks) */
+.pav-artworks-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 3.5rem;
+}
+
+@media (min-width: 768px) {
+  .pav-artworks-header {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+}
+
+.pav-artworks-header h2 {
+  font-size: 3.25rem;
+}
+
+.pav-artworks-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 650px) {
+  .pav-artworks-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .pav-artworks-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.pav-card {
+  background: var(--pav-surface);
+  border: 1px solid var(--pav-border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.pav-card:hover {
+  border-color: var(--pav-accent);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--pav-accent);
+  transform: translateY(-4px);
+}
+
+.pav-card-media {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  background: #000000;
+  overflow: hidden;
+}
+
+.pav-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.pav-card:hover .pav-card-media img {
+  transform: scale(1.05);
+}
+
+.pav-card-index {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(12, 13, 15, 0.9);
+  color: var(--pav-accent);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 800;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+}
+
+.pav-card-content {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.pav-card-artist {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--pav-muted);
+  margin-bottom: 0.35rem;
+}
+
+.pav-card-title {
+  font-size: 1.35rem;
+  line-height: 1.25;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.pav-card-medium {
+  font-size: 0.82rem;
+  color: var(--pav-accent);
+  margin-bottom: 1rem;
+}
+
+.pav-card-desc {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: #9aa2b0;
+  margin-bottom: 1.25rem;
+  flex: 1;
+}
+
+.pav-card-action {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.pav-card:hover .pav-card-action {
+  color: var(--pav-accent);
+}
+
+/* Pavilion Artist Spotlight */
+.pav-artist {
+  background: var(--pav-surface);
+  border-top: 1px solid var(--pav-border);
+  border-bottom: 1px solid var(--pav-border);
+}
+
+.pav-artist-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
+}
+
+@media (min-width: 900px) {
+  .pav-artist-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.pav-artist-info h2 {
+  font-size: 3.25rem;
+  line-height: 1.1;
+  margin-bottom: 0.75rem;
+}
+
+.pav-artist-role {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--pav-accent);
+  margin-bottom: 1.5rem;
+}
+
+.pav-artist-info p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #a6adb9;
+  margin-bottom: 1.5rem;
+}
+
+/* Pavilion Reflection */
+.pav-reflection {
+  padding: 6rem 0;
+}
+
+.pav-reflection-box {
+  background: var(--pav-card);
+  border: 1px solid var(--pav-border);
+  border-left: 4px solid var(--pav-accent);
+  border-radius: 8px;
+  padding: 3rem;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.pav-reflection-box h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.pav-reflection-box p {
+  font-size: 1.1rem;
+  line-height: 1.85;
+  color: #c0c6d4;
+}
+
+/* Pavilion Footer */
+.pav-footer {
+  background: #08080a;
+  border-top: 1px solid var(--pav-border);
+  padding: 4rem 0 5rem 0;
+  font-size: 0.85rem;
+  color: var(--pav-muted);
+}
+

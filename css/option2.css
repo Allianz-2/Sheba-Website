@@ -1,0 +1,427 @@
+/* ==========================================================================
+   OPTION 2: CCAC SLATE CONTEMPORARY (MINIMAL GRAPHITE)
+   Modeled after CCAC + Option 3: Clean, architectural, minimal text
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@600;700;800&family=Lato:wght@300;400;700&display=swap');
+
+:root {
+  --slate-bg: #14161b;
+  --slate-surface: #1b1e25;
+  --slate-card: #20242d;
+  --slate-border: #2d3340;
+  --slate-border-light: rgba(255, 255, 255, 0.1);
+  --slate-text: #f0f2f5;
+  --slate-muted: #8d95a5;
+  --slate-accent: #c98a3b; /* Refined gallery ochre */
+  --font-heading: 'Syne', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Lato', 'Space Grotesk', sans-serif;
+}
+
+body.theme-option2 {
+  background-color: var(--slate-bg);
+  color: var(--slate-text);
+  font-family: var(--font-body);
+}
+
+.theme-option2 h1,
+.theme-option2 h2,
+.theme-option2 h3,
+.theme-option2 h4 {
+  font-family: var(--font-heading);
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+/* Header */
+.slate-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(20, 22, 27, 0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--slate-border);
+}
+
+.slate-nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 74px;
+}
+
+.slate-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.slate-brand-logo {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.slate-brand-logo span {
+  color: var(--slate-accent);
+}
+
+.slate-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.slate-nav-links a {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--slate-muted);
+  transition: color 0.2s ease;
+}
+
+.slate-nav-links a:hover,
+.slate-nav-links a.active {
+  color: #ffffff;
+}
+
+/* Minimal Hero */
+.slate-hero {
+  position: relative;
+  border-bottom: 1px solid var(--slate-border);
+  padding: 5rem 0;
+  overflow: hidden;
+}
+
+.slate-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 860px) {
+  .slate-hero-grid {
+    grid-template-columns: 1.25fr 1fr;
+  }
+}
+
+.slate-kicker {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--slate-accent);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.slate-hero-title {
+  font-size: 3.25rem;
+  line-height: 1.05;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .slate-hero-title {
+    font-size: 4.25rem;
+  }
+}
+
+.slate-hero-quote {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #cfd4de;
+  margin-bottom: 2rem;
+  border-left: 3px solid var(--slate-accent);
+  padding-left: 1.25rem;
+}
+
+.slate-meta-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  font-size: 0.82rem;
+  color: var(--slate-muted);
+  border-top: 1px solid var(--slate-border);
+  padding-top: 1.5rem;
+}
+
+.slate-meta-item strong {
+  color: #ffffff;
+}
+
+.slate-hero-visual {
+  background: var(--slate-surface);
+  border: 1px solid var(--slate-border);
+  padding: 1rem;
+}
+
+.slate-hero-visual img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.slate-hero-caption {
+  font-size: 0.78rem;
+  color: var(--slate-muted);
+  margin-top: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Overview */
+.slate-overview {
+  background: var(--slate-surface);
+  border-bottom: 1px solid var(--slate-border);
+  padding: 4rem 0;
+}
+
+.slate-overview-inner {
+  max-width: 860px;
+}
+
+.slate-overview-inner h2 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.slate-overview-lead {
+  font-size: 1.18rem;
+  line-height: 1.75;
+  color: #c4cbd6;
+}
+
+/* Artworks Collection */
+.slate-artworks-section {
+  padding: 5rem 0;
+}
+
+.slate-section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid var(--slate-border);
+  padding-bottom: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .slate-section-header {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+}
+
+.slate-section-header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.slate-catalog-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 600px) {
+  .slate-catalog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .slate-catalog-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.slate-card {
+  background: var(--slate-card);
+  border: 1px solid var(--slate-border);
+  border-radius: 0;
+  overflow: hidden;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.slate-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--slate-accent);
+}
+
+.slate-card-media {
+  background: #0a0b0d;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 4 / 4.8;
+  position: relative;
+}
+
+.slate-card-media img {
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.slate-card-id-tag {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background: rgba(20, 22, 27, 0.9);
+  color: var(--slate-accent);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid var(--slate-border);
+}
+
+.slate-card-body {
+  padding: 1.35rem 1.25rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.slate-card-artist {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.slate-card-title {
+  font-size: 1.1rem;
+  font-style: italic;
+  font-family: var(--font-body);
+  color: #d1d6e0;
+  margin-bottom: 0.4rem;
+}
+
+.slate-card-medium {
+  font-size: 0.78rem;
+  color: var(--slate-muted);
+  margin-bottom: 0.85rem;
+}
+
+.slate-card-action {
+  margin-top: auto;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--slate-accent);
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--slate-border);
+}
+
+/* Visiting Artist */
+.slate-artist-section {
+  background: var(--slate-surface);
+  border-top: 1px solid var(--slate-border);
+  border-bottom: 1px solid var(--slate-border);
+  padding: 5rem 0;
+}
+
+.slate-artist-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .slate-artist-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.slate-artist-info h2 {
+  font-size: 2.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.slate-artist-role {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--slate-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 1.5rem;
+}
+
+.slate-artist-info p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #b0b8c7;
+  margin-bottom: 1.5rem;
+}
+
+.slate-quote-block {
+  border-left: 3px solid var(--slate-accent);
+  padding: 1rem 1.25rem;
+  background: rgba(255, 255, 255, 0.03);
+  font-size: 1.05rem;
+  font-style: italic;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+/* Reflection */
+.slate-reflection {
+  padding: 4.5rem 0;
+}
+
+.slate-reflection-card {
+  max-width: 820px;
+  margin: 0 auto;
+  background: var(--slate-card);
+  border: 1px solid var(--slate-border);
+  padding: 3rem 2.5rem;
+  text-align: center;
+}
+
+.slate-reflection-card h2 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.slate-reflection-card p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #c4cbd6;
+}
+
+/* Footer */
+.slate-footer {
+  background: #0d0e12;
+  border-top: 1px solid var(--slate-border);
+  color: var(--slate-muted);
+  padding: 3.5rem 0;
+  font-size: 0.85rem;
+}
