@@ -112,7 +112,7 @@ const ARTWORKS_DATABASE = [
     medium: "Soft Material, Pen & Red Wax Assemblage",
     image: "assets/images/artworks/student-10-nadie.jpg",
     rationale: "The soft-said material represents the soft suede of my identity that people easily accept. The pen represents my history and is also the source of my rejection. My history and backstory are the parts that people reject about me. I used the red wax to try and cover the pen, and it represents the rejected part of my identity, and I used the red wax to surround the soft material, as it represents that part of me that people embrace.",
-    quote: "The soft-said material represents the soft side of my identity that people easily accept."
+    quote: "The soft-said material represents the soft suede of my identity that people easily accept."
   }
 ];
 
