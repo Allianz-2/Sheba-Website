@@ -45,7 +45,7 @@ const ARTWORKS_DATABASE = [
     grade: "Grade 11 Visual Arts",
     medium: "Asthma Pump, Sculpted Wax Flowers & Hair Clip",
     image: "assets/images/artworks/student-04-tammy.jpg",
-    rationale: "I smothered the Asma pump in a lot of wax, as I was always pulled for this deficit in my life. The flowers which I sculpted from the wax lie on top of the pump and a small hair clip. This speaks to the fact that my hair has always been a source of pride and is accepted by society and although I was mocked for my asma I leant to embrace it so that is why I also added the flower on the pump.",
+    rationale: "I smothered the Asma pump in a lot of wax, as I was always bullied for this deficit in my life. The flowers which I sculpted from the wax lie on top of the pump and a small hair clip. This speaks to the fact that my hair has always been a source of pride and is accepted by society and although I was mocked for my asma I leant to embrace it so that is why I also added the flower on the pump.",
     quote: "My hair has always been a source of pride and is accepted by society and although I was mocked for my asma I leant to embrace it."
   },
   {
@@ -78,7 +78,7 @@ const ARTWORKS_DATABASE = [
     grade: "Grade 11 Visual Arts",
     medium: "Glass, Pink Flowers, Wax & Preserved Hair",
     image: "assets/images/artworks/student-07-leane.jpg",
-    rationale: "I used a small glass and added two pink flowers to it with some wax. The flowers and the glass represent how I interact with the wall. I believe my glass is always overflowing, so I am normally quite happy, and people usually praise me for this. My hair is a point of friction for me. I enjoy dyeing it, and I often find that people do not like the dark colour I select to dye it, so I used the wax to secure a piece of my own hair to the artwork.",
+    rationale: "I used a small glass and added two pink flowers to it with some wax. The flowers and the glass represent how I interact with the world. I believe my glass is always overflowing, so I am normally quite happy, and people usually praise me for this. My hair is a point of friction for me. I enjoy dyeing it, and I often find that people do not like the dark colour I select to dye it, so I used the wax to secure a piece of my own hair to the artwork.",
     quote: "I believe my glass is always overflowing, so I am normally quite happy, and people usually praise me for this."
   },
   {
@@ -89,7 +89,7 @@ const ARTWORKS_DATABASE = [
     grade: "Grade 11 Visual Arts",
     medium: "Perfume Bottle, Hair Brush & Wax Assemblage",
     image: "assets/images/artworks/student-08-nezz.jpg",
-    rationale: "The bottle represents the fear of my mom telling me that I had a strong body odour, and this made me feel like I would be rejected by people in society. If I did not smell nice, I would always have a perfume, which I used to smell nice. The brush with which it is not so heavily covered in the wax represents my hair and the hard work that I put into it so that it looks good, and as a result, I get complimented on it a lot, and thus it is a part of my identity that I feel is accepted.",
+    rationale: "The bottle represents the fear of my mom telling me that I had a strong body odour, and this made me feel like I would be rejected by people in society. If I did not smell nice, I would always have a perfume, which I used to smell nice. The brush on the other hand which is not so heavily covered in the wax represents my hair and the hard work that I put into it so that it looks good, and as a result, I get complimented on it a lot, and thus it is a part of my identity that I feel is accepted.",
     quote: "The brush represents my hair and the hard work that I put into it so that it looks good, and as a result, I get complimented on it a lot."
   },
   {
@@ -111,7 +111,7 @@ const ARTWORKS_DATABASE = [
     grade: "Grade 11 Visual Arts",
     medium: "Soft Material, Pen & Red Wax Assemblage",
     image: "assets/images/artworks/student-10-nadie.jpg",
-    rationale: "The soft-said material represents the soft side of my identity that people easily accept. The pen represents my history and is also the source of my rejection. My history and backstory are the parts that people reject about me. I used the red wax to try and cover the pen, and it represents the rejected part of my identity, and I used the red wax to surround the soft material, as it represents that part of me that people embrace.",
+    rationale: "The soft-said material represents the soft suede of my identity that people easily accept. The pen represents my history and is also the source of my rejection. My history and backstory are the parts that people reject about me. I used the red wax to try and cover the pen, and it represents the rejected part of my identity, and I used the red wax to surround the soft material, as it represents that part of me that people embrace.",
     quote: "The soft-said material represents the soft side of my identity that people easily accept."
   }
 ];
